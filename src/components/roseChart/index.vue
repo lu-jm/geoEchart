@@ -64,6 +64,9 @@ export default {
   mounted(){
     var chartDom = document.getElementById("rosechart");
     var myChart = echarts.init(chartDom);
+    window.addEventListener('resize',()=>{
+      myChart.resize()
+    })
     myChart.setOption(this.option)
   }
 };
